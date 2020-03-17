@@ -1,3 +1,4 @@
+require 'pry'
 def find_item_by_name_in_collection(name, collection)
   counter = 0
   while counter < collection.length
@@ -69,6 +70,7 @@ end
 
 def checkout(cart, coupons) 
   consolidated_cart = consolidate_cart(cart)
+  binding.pry
   apply_coupons(consolidated_cart, coupons)
   apply_clearance(consolidated_cart)
   total = 0
