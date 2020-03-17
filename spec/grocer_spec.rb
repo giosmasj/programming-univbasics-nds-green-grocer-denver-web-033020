@@ -253,7 +253,6 @@ describe "Grocer" do
         beets = find_item_by_name_in_collection('BEETS', items)
         cart = [beets, beer, beer, beer]
         coupon_collection = [coupons[1]]
-        binding.pry
 
         expect(checkout(cart, coupon_collection)).to eq(35.50)
       end
